@@ -10,7 +10,7 @@ export default defineConfig({
       '/api':
         process.env.NODE_ENV === 'development'
           ? 'http://localhost:3001'
-          : 'https://api.example.com',
+          : 'https://waitlist-server-02dba7f0853f.herokuapp.com/',
     },
   },
   resolve: {
