@@ -9,7 +9,8 @@ export default defineConfig({
     proxy: {
       '/api':
         process.env.NODE_ENV === 'development'
-          ? 'http://localhost:3001'
+          ? // ? 'http://localhost:3001'
+            'https://waitlist-server-02dba7f0853f.herokuapp.com/'
           : 'https://waitlist-server-02dba7f0853f.herokuapp.com/',
     },
   },
