@@ -27,7 +27,7 @@ function FinalCtaSection() {
     <section className="bg-darkSurface py-[120px]">
       <div className="mx-auto flex w-full max-w-[1280px] items-center justify-center px-6 md:px-8">
         <div className="flex w-full max-w-[896px] flex-col items-center gap-8 border-y-2 border-primary/20 py-[66px] text-center">
-          <h2 className="font-display text-[52px] font-bold leading-[1.1] tracking-[-2px] text-onSurface md:text-[60px]">
+          <h2 className="font-display text-[36px] font-bold leading-[1.1] tracking-[-2px] text-onSurface md:text-[52px] lg:text-[60px]">
             Send Us An Email
           </h2>
 
@@ -46,7 +46,7 @@ function FinalCtaSection() {
               className="flex w-full max-w-[512px] flex-col items-stretch gap-3"
               noValidate
             >
-              <div className="flex items-stretch gap-4">
+              <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:gap-4">
                 <input
                   type="email"
                   value={email}
@@ -77,7 +77,7 @@ function FinalCtaSection() {
             </form>
           )}
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
             <a
               href="#"
               className="flex h-14 w-[191px] items-center gap-3 rounded-md border border-onSurface/20 bg-onSurface/5 px-5 text-onSurface transition-colors hover:bg-onSurface/10"

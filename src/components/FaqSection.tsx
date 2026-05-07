@@ -33,7 +33,7 @@ function FaqSection() {
   return (
     <section id="faq" className="bg-darkSurface py-[120px]">
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-8">
-        <div className="mx-auto w-full max-w-[680px] border border-dashed border-borderColor/50 px-8 py-10 md:px-10">
+          <div className="mx-auto w-full max-w-[680px] border border-dashed border-borderColor/50 px-5 py-8 md:px-10 md:py-10">
           <h2 className="mb-8 text-center font-display text-[40px] font-bold tracking-tight text-onSurface md:text-[48px]">
             FAQ
           </h2>

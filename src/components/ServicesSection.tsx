@@ -93,7 +93,7 @@ function ServicesSection() {
               <p className="text-sm uppercase tracking-[0.2em] text-primary md:text-base">
                 Specialized Logistics
               </p>
-              <h2 className="mt-4 font-display text-5xl font-bold tracking-tight text-onSurface">
+              <h2 className="mt-4 font-display text-[34px] font-bold tracking-tight text-onSurface md:text-5xl">
                 Our Services
               </h2>
             </div>
@@ -108,7 +108,7 @@ function ServicesSection() {
               {services.map((service) => (
                 <article
                   key={service.title}
-                  className="relative h-[345px] overflow-hidden"
+                  className="relative h-[320px] overflow-hidden md:h-[345px]"
                 >
                   <img
                     src={service.imageUrl}
@@ -116,7 +116,7 @@ function ServicesSection() {
                     className="h-full w-full object-cover grayscale"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darkSurface/85 to-transparent" />
-                  <div className="absolute bottom-10 left-10 max-w-[320px]">
+                  <div className="absolute bottom-5 left-5 max-w-[320px] md:bottom-10 md:left-10">
                     <h3 className="font-display text-4xl font-bold text-primary">
                       {service.title}
                     </h3>

@@ -36,15 +36,15 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgb(var(--color-surface)/0.15),rgb(var(--color-dark-surface)/0.82)_65%)] dark:bg-[radial-gradient(circle_at_20%_40%,rgb(var(--color-surface)/0.15),rgb(var(--color-dark-surface)/0.92)_65%)]" />
       <div className="absolute inset-0 bg-gradient-to-r from-surface/95 via-surface/80 to-surface/5 dark:from-darkSurface/95 dark:via-darkSurface/85 dark:to-darkSurface/5" />
 
-      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1280px] flex-col justify-center px-6 pb-24 md:px-8">
+      <div className="relative mx-auto flex min-h-[600px] w-full max-w-[1280px] flex-col justify-center px-6 pb-24 md:min-h-[740px] md:px-8">
         <p className="animate-rise text-sm uppercase tracking-[0.2em] text-primary md:text-base">
           Redefining Secure Transit
         </p>
-        <h1 className="mt-4 max-w-[960px] font-display text-5xl font-bold leading-[0.95] tracking-tight text-onSurface md:text-7xl lg:text-8xl">
+        <h1 className="mt-4 max-w-[960px] font-display text-[40px] font-bold leading-[0.95] tracking-tight text-onSurface md:text-7xl lg:text-8xl">
           Secure rides,
           <span className="block text-primary">Schedule Your Way</span>
         </h1>
-        <p className="mt-8 max-w-[460px] text-lg leading-8 text-subdued md:text-xl">
+        <p className="mt-6 max-w-[460px] text-base leading-7 text-subdued md:mt-8 md:text-xl">
           On-demand luxury, security-focused rides and scheduled vehicle hires
           worldwide.
         </p>
@@ -56,7 +56,7 @@ function HeroSection() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="mt-10 flex w-full max-w-[520px] flex-col gap-3 sm:flex-row sm:items-center"
+            className="mt-8 flex w-full max-w-[420px] items-start md:mt-10 md:max-w-[520px]"
             noValidate
           >
             <div className="flex flex-1 flex-col gap-1">
@@ -66,7 +66,7 @@ function HeroSection() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter email for priority access"
                 required
-                className="h-14 flex-1 border border-borderColor/65 bg-card/80 p-5 text-sm text-onSurface placeholder:text-subdued/90 dark:bg-card/35"
+                className="h-12 flex-1 border border-borderColor/65 bg-card/80 p-4 text-sm text-onSurface placeholder:text-subdued/90 dark:bg-card/35 md:h-14 md:p-5"
               />
               {status === 'error' && (
                 <p className="text-xs text-red-400">{errorMsg}</p>
@@ -75,7 +75,7 @@ function HeroSection() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="h-14 bg-primary px-8 text-base font-bold text-onPrimary disabled:opacity-60"
+              className="h-12 shrink-0 bg-primary px-6 text-sm font-bold text-onPrimary disabled:opacity-60 md:h-14 md:px-8 md:text-base"
             >
               {status === 'loading' ? 'Joining…' : 'Join Waitlist'}
             </button>

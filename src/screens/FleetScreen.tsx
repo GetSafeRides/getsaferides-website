@@ -188,7 +188,7 @@ function FleetScreen() {
       />
 
       {/* Hero */}
-      <section className="relative h-[410px] overflow-hidden bg-[#131313]">
+      <section className="relative h-[260px] overflow-hidden bg-[#131313] md:h-[410px]">
         {/* Grayscale vehicle image background */}
         <div className="absolute inset-0 opacity-40">
           <div
@@ -209,7 +209,7 @@ function FleetScreen() {
           <p className="font-body text-base font-normal uppercase tracking-[3.2px] text-primary">
             Fleet
           </p>
-          <h1 className="font-display text-[64px] font-extrabold leading-none tracking-[-3.2px] text-onSurface md:text-[96px] md:tracking-[-4.8px]">
+          <h1 className="font-display text-[48px] font-extrabold leading-none tracking-[-2.4px] text-onSurface md:text-[64px] md:tracking-[-3.2px] lg:text-[96px] lg:tracking-[-4.8px]">
             Our <span className="text-primary">Fleet</span>
           </h1>
         </div>

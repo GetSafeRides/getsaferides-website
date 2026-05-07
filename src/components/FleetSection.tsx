@@ -44,7 +44,7 @@ function FleetSection() {
       <div className="mx-auto w-full max-w-[1260px] px-6 md:px-8">
         <div className="mx-auto w-full max-w-[1196px]">
           <div className="mb-12 flex items-end justify-between">
-            <h2 className="font-display text-5xl font-bold tracking-tight text-onSurface">
+            <h2 className="font-display text-[32px] font-bold tracking-tight text-onSurface md:text-5xl">
               The Fleet
             </h2>
             <Link

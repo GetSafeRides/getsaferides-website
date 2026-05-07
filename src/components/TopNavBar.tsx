@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiMoon, FiSun } from 'react-icons/fi';
+import { FiMoon, FiSun, FiMenu, FiX } from 'react-icons/fi';
 import WaitlistModal from '@components/WaitlistModal';
 
 type Props = {
@@ -34,6 +34,7 @@ function TopNavBar(props: Props) {
   const { isDarkMode, onToggleTheme } = props;
   const [activeSection, setActiveSection] = useState<string>('');
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -69,7 +70,7 @@ function TopNavBar(props: Props) {
       <div className="mx-auto flex h-[72px] w-full max-w-[1280px] items-center justify-between px-6 md:px-8">
         <Link
           to="/"
-          className="font-display text-xl font-bold tracking-tight text-onSurface"
+          className="font-display text-xl font-bold tracking-tight text-primary"
         >
           SafeRides
         </Link>
@@ -110,7 +111,7 @@ function TopNavBar(props: Props) {
           <button
             type="button"
             onClick={onToggleTheme}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-borderColor bg-card text-onSurface transition-colors hover:bg-primary/15"
+            className="hidden h-10 w-10 items-center justify-center rounded-md border border-borderColor bg-card text-onSurface transition-colors hover:bg-primary/15 lg:inline-flex"
             aria-label={
               isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
             }
@@ -119,13 +120,90 @@ function TopNavBar(props: Props) {
             {isDarkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
           <button
-            className="rounded-sm bg-primary px-6 py-2 text-sm font-bold text-onPrimary"
+            className="hidden rounded-sm bg-primary px-6 py-2 text-sm font-bold text-onPrimary lg:block"
             onClick={() => setIsWaitlistOpen(true)}
           >
             Join Waitlist
           </button>
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(true)}
+            className="inline-flex h-10 w-10 items-center justify-center text-onSurface lg:hidden"
+            aria-label="Open navigation menu"
+          >
+            <FiMenu size={24} />
+          </button>
         </div>
       </div>
+
+      {/* Mobile full-screen menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-50 flex flex-col bg-[#131313] lg:hidden">
+          <div className="flex h-[70px] shrink-0 items-center justify-between border-b border-borderColor/45 px-5">
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="font-display text-xl font-bold tracking-tight text-primary"
+            >
+              SafeRides
+            </Link>
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-onSurface"
+              aria-label="Close navigation menu"
+            >
+              <FiX size={20} />
+            </button>
+          </div>
+          <nav className="flex flex-col px-5 pt-2">
+            {NAV_LINKS.map((link, index) => {
+              const isActive =
+                (link.isRoute && location.pathname === link.path) ||
+                activeSection === link.sectionId;
+              const itemClass = `block py-5 text-[17px] font-medium ${
+                isActive ? 'text-primary' : 'text-onSurface'
+              }`;
+              return (
+                <div key={link.sectionId}>
+                  {link.isRoute ? (
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={itemClass}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={`/#${link.hash}`}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={itemClass}
+                    >
+                      {link.label}
+                    </a>
+                  )}
+                  {index < NAV_LINKS.length - 1 && (
+                    <div className="h-px w-full bg-borderColor/45" />
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+          <div className="px-5 pt-8">
+            <button
+              type="button"
+              onClick={() => {
+                setIsMenuOpen(false);
+                setIsWaitlistOpen(true);
+              }}
+              className="w-[195px] bg-primary py-4 text-base font-bold text-onPrimary"
+            >
+              Join Waitlist
+            </button>
+          </div>
+        </div>
+      )}
       <WaitlistModal
         isOpen={isWaitlistOpen}
         onClose={() => setIsWaitlistOpen(false)}
