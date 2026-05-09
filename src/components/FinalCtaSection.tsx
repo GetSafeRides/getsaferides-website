@@ -53,22 +53,14 @@ function FinalCtaSection() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Professional email address"
                   required
-                  className="flex-1 bg-white/10 px-6 py-[29px] text-base text-onSurface placeholder:text-onSurface/60 focus:outline-none"
+                  className="flex-1 bg-white/10 px-4 py-4 text-base text-onSurface placeholder:text-onSurface/60 focus:outline-none sm:px-6 sm:py-[29px]"
                 />
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="bg-primary px-10 py-4 text-base font-bold leading-6 text-onPrimary shadow-[0px_0px_10px_rgba(212,175,55,0.2)] disabled:opacity-60"
+                  className="bg-primary px-6 py-4 text-base font-bold leading-6 text-onPrimary shadow-[0px_0px_10px_rgba(212,175,55,0.2)] disabled:opacity-60 sm:px-10"
                 >
-                  {status === 'loading' ? (
-                    'Joining…'
-                  ) : (
-                    <>
-                      Join
-                      <br />
-                      Waitlist
-                    </>
-                  )}
+                  {status === 'loading' ? 'Joining…' : 'Join Waitlist'}
                 </button>
               </div>
               {status === 'error' && (
