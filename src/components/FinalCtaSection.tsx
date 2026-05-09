@@ -24,9 +24,9 @@ function FinalCtaSection() {
   }
 
   return (
-    <section className="bg-darkSurface py-[120px]">
+    <section className="bg-darkSurface py-16 md:py-[120px]">
       <div className="mx-auto flex w-full max-w-[1280px] items-center justify-center px-6 md:px-8">
-        <div className="flex w-full max-w-[896px] flex-col items-center gap-8 border-y-2 border-primary/20 py-[66px] text-center">
+        <div className="flex w-full max-w-[896px] flex-col items-center gap-8 border-y-2 border-primary/20 py-10 text-center md:py-[66px]">
           <h2 className="font-display text-[36px] font-bold leading-[1.1] tracking-[-2px] text-onSurface md:text-[52px] lg:text-[60px]">
             Send Us An Email
           </h2>

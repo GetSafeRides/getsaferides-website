@@ -85,10 +85,10 @@ function ServicesSection() {
   const currentSlide = SLIDER_ITEMS[currentSlideIndex];
 
   return (
-    <section className="bg-surface py-[120px]" id="services">
+    <section className="bg-surface py-16 md:py-[120px]" id="services">
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-8">
         <div className="mx-auto w-full max-w-[1216px]">
-          <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="mb-10 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-primary md:text-base">
                 Specialized Logistics
@@ -123,9 +123,9 @@ function ServicesSection() {
                     <p className="mt-3 text-base leading-7 text-onSurface">
                       {service.description}
                     </p>
-                    <button className="mt-6 border-b border-primary/30 pb-1 text-xs font-bold uppercase tracking-[0.12em] text-primary">
+                    {/* <button className="mt-6 border-b border-primary/30 pb-1 text-xs font-bold uppercase tracking-[0.12em] text-primary">
                       Review Protocol
-                    </button>
+                    </button> */}
                   </div>
                 </article>
               ))}

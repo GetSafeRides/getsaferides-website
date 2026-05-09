@@ -54,7 +54,7 @@ function ProcessSection() {
   ];
 
   return (
-    <section className="bg-surface py-[120px]">
+    <section className="bg-surface py-16 md:py-[120px]">
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-8">
         <div className="mx-auto w-full max-w-[1216px]">
           <div className="text-center">

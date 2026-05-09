@@ -40,7 +40,7 @@ function FleetSection() {
   ];
 
   return (
-    <section className="bg-darkSurface py-[120px]" id="fleet">
+    <section className="bg-darkSurface py-16 md:py-[120px]" id="fleet">
       <div className="mx-auto w-full max-w-[1260px] px-6 md:px-8">
         <div className="mx-auto w-full max-w-[1196px]">
           <div className="mb-12 flex items-end justify-between">

@@ -25,7 +25,7 @@ function HeroSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-darkSurface pt-[112px]"
+      className="relative overflow-hidden bg-darkSurface pt-[56px]"
       id="services"
     >
       <img
@@ -36,7 +36,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgb(var(--color-surface)/0.15),rgb(var(--color-dark-surface)/0.82)_65%)] dark:bg-[radial-gradient(circle_at_20%_40%,rgb(var(--color-surface)/0.15),rgb(var(--color-dark-surface)/0.92)_65%)]" />
       <div className="absolute inset-0 bg-gradient-to-r from-surface/95 via-surface/80 to-surface/5 dark:from-darkSurface/95 dark:via-darkSurface/85 dark:to-darkSurface/5" />
 
-      <div className="relative mx-auto flex min-h-[600px] w-full max-w-[1280px] flex-col justify-center px-6 pb-24 md:min-h-[740px] md:px-8">
+      <div className="relative mx-auto flex min-h-[600px] w-full max-w-[1280px] flex-col justify-center px-6 pb-14 md:min-h-[740px] md:px-8 md:pb-24">
         <p className="animate-rise text-sm uppercase tracking-[0.2em] text-primary md:text-base">
           Redefining Secure Transit
         </p>

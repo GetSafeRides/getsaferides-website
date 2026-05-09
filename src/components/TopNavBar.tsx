@@ -138,7 +138,7 @@ function TopNavBar(props: Props) {
 
       {/* Mobile full-screen menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-[#131313] lg:hidden">
+        <div className="fixed inset-0 z-50 flex flex-col bg-darkSurface lg:hidden">
           <div className="flex h-[70px] shrink-0 items-center justify-between border-b border-borderColor/45 px-5">
             <Link
               to="/"
@@ -156,7 +156,7 @@ function TopNavBar(props: Props) {
               <FiX size={20} />
             </button>
           </div>
-          <nav className="flex flex-col px-5 pt-2">
+          <nav className="flex flex-col px-5 pt-2 bg-darkSurface">
             {NAV_LINKS.map((link, index) => {
               const isActive =
                 (link.isRoute && location.pathname === link.path) ||
@@ -189,19 +189,27 @@ function TopNavBar(props: Props) {
                 </div>
               );
             })}
-          </nav>
-          <div className="px-5 pt-8">
+            <div className="h-px w-full bg-borderColor/45" />
             <button
               type="button"
               onClick={() => {
                 setIsMenuOpen(false);
                 setIsWaitlistOpen(true);
               }}
-              className="w-[195px] bg-primary py-4 text-base font-bold text-onPrimary"
+              className="block w-full py-5 text-left text-[17px] font-medium text-onSurface"
             >
               Join Waitlist
             </button>
-          </div>
+            <div className="h-px w-full bg-borderColor/45" />
+            <button
+              type="button"
+              onClick={onToggleTheme}
+              className="flex w-full items-center gap-3 py-5 text-[17px] font-medium text-onSurface"
+            >
+              {isDarkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
+              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
+          </nav>
         </div>
       )}
       <WaitlistModal

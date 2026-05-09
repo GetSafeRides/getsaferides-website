@@ -1,6 +1,6 @@
 function FooterSection() {
   return (
-    <footer className="bg-surface py-16">
+    <footer className="bg-surface py-10 md:py-16">
       <div className="mx-auto grid w-full max-w-[1280px] gap-12 px-6 md:grid-cols-3 md:px-8">
         <div>
           <p className="font-display text-3xl font-bold text-onSurface">
