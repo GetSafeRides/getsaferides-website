@@ -13,7 +13,7 @@ function ExperienceSection() {
             businesses needing secure transportation, point-to-point Safe Drop
             or day-based Safe Hire.
           </p>
-          <div className="mt-10 grid grid-cols-2 gap-8">
+          {/* <div className="mt-10 grid grid-cols-2 gap-8">
             <div>
               <p className="font-display text-4xl font-bold text-primary md:text-5xl">
                 0.0%
@@ -30,7 +30,7 @@ function ExperienceSection() {
                 Tactical Support
               </p>
             </div>
-          </div>
+          </div> */}
         </article>
 
         <div className="relative min-h-[280px] overflow-hidden border border-borderColor/45 shadow-frame md:min-h-[520px]">

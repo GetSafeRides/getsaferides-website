@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { submitWaitlistEmail } from '@api/waitlistApi';
+import googlePlayLogo from '@assets/googlePlayLogo.png';
+import appStoreLogo from '@assets/appleLogo.png';
 
 function FinalCtaSection() {
   const [email, setEmail] = useState('');
@@ -71,25 +72,25 @@ function FinalCtaSection() {
 
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <a
-              href="#"
+              // href="#"
               className="flex h-14 w-[191px] items-center gap-3 rounded-md border border-onSurface/20 bg-onSurface/5 px-5 text-onSurface transition-colors hover:bg-onSurface/10"
             >
-              <FaGooglePlay size={22} />
+              <img src={googlePlayLogo} alt="Google Play" className="h-6 w-6" />
               <span className="flex flex-col items-start leading-tight">
                 <span className="text-[10px] font-normal tracking-wide text-onSurface/70">
-                  GET IT ON
+                  Coming Soon on
                 </span>
                 <span className="text-sm font-semibold">Google Play</span>
               </span>
             </a>
             <a
-              href="#"
+              // href="#"
               className="flex h-14 w-[191px] items-center gap-3 rounded-md border border-onSurface/20 bg-onSurface/5 px-5 text-onSurface transition-colors hover:bg-onSurface/10"
             >
-              <FaApple size={24} />
+              <img src={appStoreLogo} alt="App Store" className="h-6 w-6" />
               <span className="flex flex-col items-start leading-tight">
                 <span className="text-[10px] font-normal tracking-wide text-onSurface/70">
-                  Download on the
+                  Coming Soon on
                 </span>
                 <span className="text-sm font-semibold">App Store</span>
               </span>
