@@ -1,9 +1,9 @@
 import cadillacEscaladeImage from '@assets/vehicles-images/cadillac_escalade_gmc_yukon_denali.png';
 import lexusRxImage from '@assets/vehicles-images/lexus_rx_350_rx_450h.png';
 import toyotaLandCruiserImage from '@assets/vehicles-images/toyota_land_cruiser_vxr__300_series.png';
-import { FaUsers } from 'react-icons/fa';
+// import { FaUsers } from 'react-icons/fa';
 import { FiArrowRight } from 'react-icons/fi';
-import { RiShieldCheckFill } from 'react-icons/ri';
+// import { RiShieldCheckFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 type FleetItem = {
@@ -71,8 +71,8 @@ function FleetSection() {
                   <h3 className="font-display text-[28px] font-bold leading-tight text-onSurface">
                     {item.name}
                   </h3>
-                  <p className="text-sm text-subdued">{item.descriptor}</p>
-                  <div className="flex items-center justify-between border-t border-borderColor/40 pt-4 text-sm text-primary">
+                  {/* <p className="text-sm text-subdued">{item.descriptor}</p> */}
+                  {/* <div className="flex items-center justify-between border-t border-borderColor/40 pt-4 text-sm text-primary">
                     <span className="flex items-center gap-2">
                       <FaUsers className="size-3.5" />
                       {item.capacity}
@@ -81,7 +81,7 @@ function FleetSection() {
                       <RiShieldCheckFill className="size-4" />
                       {item.availability}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </article>
             ))}

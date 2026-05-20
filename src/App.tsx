@@ -32,6 +32,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/security-protocol" element={<SecurityProtocolScreen />} />
+        <Route
+          path="/security-protocol/:doc"
+          element={<SecurityProtocolScreen />}
+        />
         <Route path="/fleet" element={<FleetScreen />} />
       </Routes>
     </>

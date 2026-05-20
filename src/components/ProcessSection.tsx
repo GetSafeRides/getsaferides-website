@@ -65,7 +65,7 @@ function ProcessSection() {
           </div>
 
           <div className="relative mt-12 md:mt-14">
-            <div className="absolute left-1/2 top-0 hidden h-full w-[2px] -translate-x-1/2 bg-borderColor/45 md:block" />
+            <div className="absolute left-6 top-0 h-full w-[2px] -translate-x-1/2 bg-borderColor/45 md:left-1/2" />
 
             <div className="space-y-8 md:space-y-10">
               {steps.map((step, index) => {
@@ -74,11 +74,10 @@ function ProcessSection() {
                 return (
                   <article
                     key={step.title}
-                    className="grid gap-5 rounded-md border border-borderColor/40 bg-card/40 p-5 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:rounded-none md:border-0 md:bg-transparent md:p-0"
+                    className="grid grid-cols-[48px_1fr] items-center gap-x-5 md:grid-cols-[1fr_auto_1fr] md:gap-8"
                   >
-                    <div
-                      className={isTextLeft ? 'order-1' : 'order-3 md:order-1'}
-                    >
+                    {/* Desktop left column (hidden on mobile) */}
+                    <div className="hidden md:block md:order-1">
                       {isTextLeft ? (
                         <div className="md:ml-auto md:max-w-[513px]">
                           <h3 className="font-display text-[28px] font-bold text-onSurface">
@@ -95,17 +94,28 @@ function ProcessSection() {
                       )}
                     </div>
 
-                    <div className="order-2 flex items-center justify-center z-20">
+                    {/* Number circle — mobile: left col | desktop: center col */}
+                    <div className="relative z-20 flex justify-center md:order-2">
                       <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-primary text-lg font-bold text-onPrimary">
                         {index + 1}
                       </div>
                     </div>
 
-                    <div
-                      className={
-                        isTextLeft ? 'order-3 md:order-3' : 'order-1 md:order-3'
-                      }
-                    >
+                    {/* Mobile content: image above title/description (hidden on desktop) */}
+                    <div className="md:hidden">
+                      <div className="mb-4 flex items-center justify-center">
+                        {step.icon}
+                      </div>
+                      <h3 className="font-display text-[28px] font-bold text-onSurface">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2 text-base leading-7 text-subdued">
+                        {step.description}
+                      </p>
+                    </div>
+
+                    {/* Desktop right column (hidden on mobile) */}
+                    <div className="hidden md:block md:order-3">
                       {isTextLeft ? (
                         <div className="flex h-[180px] items-center justify-center">
                           {step.icon}

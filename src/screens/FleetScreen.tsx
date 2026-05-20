@@ -252,17 +252,17 @@ function FleetScreen() {
                 <h3 className="font-display text-[18px] font-bold leading-[28px] text-primary">
                   {vehicle.name}
                 </h3>
-                <p className="text-[12px] uppercase tracking-[1.2px] text-subdued">
+                {/* <p className="text-[12px] uppercase tracking-[1.2px] text-subdued">
                   {vehicle.descriptor}
-                </p>
-                <div className="mt-4 flex items-center justify-between">
+                </p> */}
+                {/* <div className="mt-4 flex items-center justify-between">
                   <span className="text-[14px] text-onSurface/80">
                     {vehicle.specLeft}
                   </span>
                   <span className="text-[14px] text-primary">
                     {vehicle.specRight}
                   </span>
-                </div>
+                </div> */}
               </div>
             </article>
           ))}

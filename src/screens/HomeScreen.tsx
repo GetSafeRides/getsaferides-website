@@ -46,8 +46,8 @@ function HomeScreen() {
       />
       <main>
         <HeroSection />
-        <ServicesSection />
         <ExperienceSection />
+        <ServicesSection />
         <ProcessSection />
         <FleetSection />
         <FaqSection />
